@@ -8,4 +8,12 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="showSongDetailsStyle">
+        <item name="android:textSize">@dimen/showSongDetailsStyle.textSize</item>
+        <item name="android:layout_marginRight">@dimen/showSongDetailsStyle.layout_marginRight
+        </item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
 </resources>

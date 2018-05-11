@@ -17,4 +17,5 @@ class Song {
     public String getArtistName() {
         return artistName;
     }
+
 }
