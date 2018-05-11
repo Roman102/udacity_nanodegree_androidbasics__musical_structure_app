@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Currently popular songs</string>
+
+    <string name="song_details">Song Details</string>
+    <string name="song_name">Song: %1$s</string>
+    <string name="artist_name">Artist: %1$s</string>
 </resources>
