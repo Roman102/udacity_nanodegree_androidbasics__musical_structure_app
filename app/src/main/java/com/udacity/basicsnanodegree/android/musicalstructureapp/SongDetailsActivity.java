@@ -9,11 +9,22 @@ import android.widget.TextView;
 
 public class SongDetailsActivity extends AppCompatActivity {
 
+    private TextView playButtonView;
+    private TextView pauseButtonView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_song_details);
+
+        playButtonView = findViewById(R.id.play_button_view);
+        pauseButtonView = findViewById(R.id.pause_button_view);
+
+        if (savedInstanceState != null) {
+            playButtonView.setVisibility(savedInstanceState.getInt("playButtonView.visibility"));
+            pauseButtonView.setVisibility(savedInstanceState.getInt("pauseButtonView.visibility"));
+        }
 
         setTitle(R.string.song_details);
 
@@ -54,8 +65,26 @@ public class SongDetailsActivity extends AppCompatActivity {
         );
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        outState.putInt("playButtonView.visibility", playButtonView.getVisibility());
+        outState.putInt("pauseButtonView.visibility", pauseButtonView.getVisibility());
+    }
+
     public void closeSongDetails(View v) {
         finish();
+    }
+
+    public void playOrPauseSong(View v) {
+        if (playButtonView.getVisibility() == View.VISIBLE) {
+            playButtonView.setVisibility(View.INVISIBLE);
+            pauseButtonView.setVisibility(View.VISIBLE);
+        } else {
+            playButtonView.setVisibility(View.VISIBLE);
+            pauseButtonView.setVisibility(View.INVISIBLE);
+        }
     }
 
 }
