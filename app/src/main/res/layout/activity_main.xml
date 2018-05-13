@@ -12,8 +12,20 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<ListView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/list"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" />
+    android:orientation="vertical">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="getNewSongs"
+        android:text="@string/get_new_songs" />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" />
+</LinearLayout>

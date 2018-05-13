@@ -32,6 +32,25 @@ public class SongDetailsActivity extends AppCompatActivity {
                         intent.getStringExtra("CURRENT_SONG_ARTIST")
                 )
         );
+
+        int durationSeconds = intent.getIntExtra("CURRENT_SONG_DURATION", 0);
+
+        int durationHours = durationSeconds / 3600;
+
+        durationSeconds -= durationHours * 3600;
+
+        int durationMinutes = durationSeconds / 60;
+
+        durationSeconds -= durationMinutes * 60;
+
+
+        ((TextView) findViewById(R.id.duration)).setText(
+                String.format(
+                        res.getString(R.string.duration),
+                        0, 0, 0,
+                        durationHours, durationMinutes, durationSeconds
+                )
+        );
     }
 
 }
