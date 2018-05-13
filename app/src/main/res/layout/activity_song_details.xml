@@ -58,10 +58,10 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/stop_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical">
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -75,6 +75,28 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:text="■"
+                android:textSize="40sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:onClick="closeSongDetails">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="O"
+                android:textSize="120sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="X"
                 android:textSize="40sp" />
         </RelativeLayout>
     </LinearLayout>
