@@ -92,7 +92,7 @@ public class SongDetailsActivity extends AppCompatActivity {
                     }
                 }
             }
-        }, 0, 10);
+        }, 0, 1000);
     }
 
     public void stopSongPlayback(View view) {
